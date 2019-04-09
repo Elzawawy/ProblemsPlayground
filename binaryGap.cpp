@@ -19,7 +19,7 @@ std::string toBinary(int n)
     while(n!=0) {r=(n%2==0 ?"0":"1")+r; n/=2;}
     return r;
 }
-int solution(int N) {
+int binaryGap(int N) {
     // write your code in C++14 (g++ 6.2.0)
     std::string binary = toBinary(N);
     bool flag=false; int countGap = 0;
