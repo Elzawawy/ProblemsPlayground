@@ -11,21 +11,20 @@
  *
  */
 
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
- */
+#include <variant>
+// Definition for singly-linked list.
+typedef struct ListNode {
+      int val;
+    ListNode *next;
+    ListNode(int x) : val(x), next(nullptr) {}
+}ListNode;
 
 bool hasCycle(ListNode *head) {
     while (head != nullptr) {
         if (head == head->next) {
             return true;
         }
-        swap(head, head->next);
+        std::swap(head, head->next);
     }
     return false;
 }
@@ -33,9 +32,9 @@ bool hasCycle(ListNode *head) {
 ListNode *detectCycle(ListNode *head) {
     auto slow = head, fast = head;
     do {
-        if (fast == NULL) return NULL;
+        if (fast ==nullptr) return nullptr;
         fast = fast->next;
-        if (fast == NULL) return NULL;
+        if (fast == nullptr) return nullptr;
         fast = fast->next;
         slow = slow->next;
     } while (fast != slow);

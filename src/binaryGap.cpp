@@ -11,6 +11,7 @@
  *
  */
 
+#include <string>
 /*********Attempt 1: Working 100% correct on all test cases*********/
 
 std::string toBinary(int n)
