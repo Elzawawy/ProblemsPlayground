@@ -11,10 +11,10 @@
  * More about problem from: https://leetcode.com/problems/shortest-unsorted-continuous-subarray/
  *
  */
-
+#include <vector>
 /************ Attempt 1: Sounds working but gets Runtime error***********/
 
-int findUnsortedSubarray(vector<int>& nums) {
+int findUnsortedSubarray(std::vector<int>& nums) {
     int start = 0, finish = -1,end =0;
     if((int)nums.size() == 2) end=3;
     else end= (int)nums.size();
@@ -22,11 +22,11 @@ int findUnsortedSubarray(vector<int>& nums) {
         if (nums[i] <= nums[i - 1]) {
             if(start == 0) start = i - 1;
             finish = i;
-            swap(nums[i],nums[i-1]);
+            std::swap(nums[i],nums[i-1]);
         } if (nums[i] >= nums[i + 1]) {
             if(start == 0) start = i;
             finish = i + 1;
-            swap(nums[i],nums[i+1]);
+            std::swap(nums[i],nums[i+1]);
         }
 
     }

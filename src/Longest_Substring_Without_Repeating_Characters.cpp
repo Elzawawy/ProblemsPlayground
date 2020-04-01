@@ -14,22 +14,22 @@
 #include <algorithm>
 #include <iostream>
 
-using namespace std;
+
 
 class Solution {
 public:
-    int lengthOfLongestSubstring(string s) {
-        string currentSubstring;
-        vector<string> listOfSubstrings;
-        map<char, int> charFrequency;
+    int lengthOfLongestSubstring(std::string s) {
+        std::string currentSubstring;
+        std::vector<std::string> listOfSubstrings;
+        std::map<char, int> charFrequency;
         for (char c : s) {
             if(++charFrequency[c] > 1){
-                cout<<(c)<<endl;
-                cout<<(charFrequency[c])<<endl;
+                std::cout<<(c)<<std::endl;
+                std::cout<<(charFrequency[c])<<std::endl;
                 listOfSubstrings.push_back(currentSubstring);
                 charFrequency.clear();
 
-                string lastPart = currentSubstring.substr(currentSubstring.find(c)+1, currentSubstring.size()-1);
+                std::string lastPart = currentSubstring.substr(currentSubstring.find(c)+1, currentSubstring.size()-1);
                 currentSubstring = lastPart+c;
                 for (char c2 :currentSubstring){
                     charFrequency[c2]++;
@@ -38,13 +38,13 @@ public:
             else {
                 currentSubstring += c;
             }
-            for (string snew : listOfSubstrings){
-                cout<<snew<<endl;
+            for (std::string snew : listOfSubstrings){
+                std::cout<<snew<<std::endl;
             }
         }
         listOfSubstrings.push_back(currentSubstring);
-        cout<<listOfSubstrings[0]<<endl;
-        cout<<listOfSubstrings[1]<<endl;
+        std::cout<<listOfSubstrings[0]<<std::endl;
+        std::cout<<listOfSubstrings[1]<<std::endl;
         return static_cast<int>(max_line_length(listOfSubstrings));
     }
 

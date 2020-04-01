@@ -10,16 +10,17 @@
  *
  * Find examples and more from here: https://leetcode.com/problems/k-diff-pairs-in-an-array/
  */
-
+#include <vector>
+#include <set>
 /*****Attempt 1: Not fully working yet*****/
 
-int findPairs(vector<int>& nums, int k) {
-    set<pair<int, int>> pairsSet;
+int findPairs(std::vector<int>& nums, int k) {
+    std::set<std::pair<int, int>> pairsSet;
     for (int i = 0; i < nums.size()-1; ++i) {
         for (int j = i + 1; j < nums.size(); ++j) {
-            if (abs(nums[i] - nums[j]) == k) {
-                if(pairsSet.count(make_pair(nums[j], nums[i])) == 0)
-                    pairsSet.insert(make_pair(nums[i], nums[j]));
+            if (std::abs(nums[i] - nums[j]) == k) {
+                if(pairsSet.count(std::make_pair(nums[j], nums[i])) == 0)
+                    pairsSet.insert(std::make_pair(nums[i], nums[j]));
             }
         }
     }

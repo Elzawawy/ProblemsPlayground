@@ -17,9 +17,10 @@
  *
  */
 
+#include <string>
 /*******Attempt 1: Accepted Solution in 8ms and 8.4 MB ********/
 
-int minAddToMakeValid(string S) {
+int minAddToMakeValid(std::string S) {
     int open =0;
     int count=0;
     for(char& c : S) {

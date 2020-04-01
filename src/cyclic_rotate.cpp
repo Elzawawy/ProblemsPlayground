@@ -10,12 +10,12 @@
  * More about the problem can be found from: https://app.codility.com/programmers/lessons/2-arrays/cyclic_rotation/
  *
  */
-
+#include <vector>
 /*********Attempt 1: Working 100% on all test cases.**********/
 
-vector<int> cyclicRotate(vector<int> &A, int K) {
+std::vector<int> cyclicRotate(std::vector<int> &A, int K) {
     // write your code in C++14 (g++ 6.2.0)
-    vector<int> result;
+    std::vector<int> result;
     if(A.empty()) return result;
     for (int j = 0; j < K; ++j) {
         result.insert(result.begin(), A[A.size() - 1]);
