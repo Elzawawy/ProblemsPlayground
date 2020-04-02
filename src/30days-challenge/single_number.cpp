@@ -20,6 +20,7 @@
 
 #include <vector>
 #include <map>
+#include <iostream>
 
 class Solution {
 public:
@@ -30,5 +31,4 @@ public:
 
         return single_num;
     }
-
 };
