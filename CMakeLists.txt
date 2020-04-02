@@ -3,4 +3,4 @@ project(ProblemsPlayground)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(ProblemsPlayground src main.cpp useful_IO.h src/single_number.cpp)
+add_executable(ProblemsPlayground src main.cpp useful_IO.h src/30days-challenge/single_number.cpp src/30days-challenge/happy_number.cpp)
