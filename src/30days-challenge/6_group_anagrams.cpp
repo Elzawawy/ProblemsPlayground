@@ -13,6 +13,7 @@
  * Notes about Problem:
  * All inputs will be in lowercase.
  * The order of your output does not matter.
+ * Problem source and more about it can be found from: https://leetcode.com/problems/group-anagrams/
  */
 #include <vector>
 #include <string>
