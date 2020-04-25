@@ -6,11 +6,10 @@
 
 /* ### Problem:
  * Given a binary array, find the maximum length of a contiguous sub-array with equal number of 0 and 1.
- * Problem source and more about it can be found from: https://leetcode.com/problems/last-stone-weight/
+ * Problem source and more about it can be found from: https://leetcode.com/problems/contiguous-array/
  *
  * ### Constraints
- * 1 <= stones.length <= 30
- * 1 <= stones[i] <= 1000
+ * The length of the given binary array will not exceed 50,000.
  */
 #include <vector>
 #include <unordered_map>
