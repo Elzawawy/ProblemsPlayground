@@ -89,8 +89,8 @@ public:
      * Start from top right position and go right or downwards based on whether its 1 or 0, that optimally decreases the number of calls.
      * Solution Runtime: 4 ms (Beats 100%)
      * Solution Memory Usage: 8.4 MB
-     * @param binaryMatrix
-     * @return
+     * @param binaryMatrix matrix that is provided on interactive environment.
+     * @return the index of the column with at least one column in index or -1 when not found.
      */
     int leftMostColumnWithOneSolution2(BinaryMatrix& binaryMatrix)
     {
