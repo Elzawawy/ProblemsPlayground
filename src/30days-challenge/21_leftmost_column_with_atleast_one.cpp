@@ -25,9 +25,7 @@
  */
 #include <climits>
 /**
- * // This is the BinaryMatrix's API interface.
- * // You should not implement it, or speculate about its implementation
- * // We can simulate it to try it locally if we want to run this file locally, otherwise it has errors.
+
  * class BinaryMatrix {
  *   public:
  *     int get(int x, int y);
@@ -38,6 +36,15 @@
 
 class Solution {
 private:
+    /** BinaryMatrix
+     * This is the BinaryMatrix's API interface. You should not implement it, or speculate about its implementation
+     * However, We can simulate it to try it locally if we want to run this file locally, otherwise it has errors.
+     */
+    class BinaryMatrix {
+    public:
+        int get(int x, int y);
+        std::vector<int> dimensions();
+    };
     int binarySearch(BinaryMatrix& binaryMatrix, int row, int l, int r, int x)
     {
         while (l<=r) {
