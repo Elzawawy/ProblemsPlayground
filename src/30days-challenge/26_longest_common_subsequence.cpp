@@ -22,20 +22,23 @@ class Solution {
 public:
     /** Solution 1: Dynamic Programming based-Algorithm
      * DP[i][j] represents the length of the longest common sub-sequence of text1[0..i] & text2[0..j].
+     * Solution Runtime: 16 ms (Beats 84.50%)
+     * Solution Memory Usage: 8 MB (Beats 100%)
      * @param text1 input string one
      * @param text2 input string two
      * @return the longest commen sub-sequence of the two strings.
      */
-    int longestCommonSubsequence(std::string text1, std::string text2) {
+    int longestCommonSubsequence(std::string text1, std::string text2)
+    {
         // allocate and initialize dynamic programming array for solution.
         int dp[text1.size()+1][text2.size()+1];
         memset(dp, 0, sizeof(dp));
-        for(int i=0; i<text1.size();i++)
-            for(int j=0; j<text2.size();j++)
+        for (int i = 0; i<text1.size(); i++)
+            for (int j = 0; j<text2.size(); j++)
                 // common letter --> add 1 to the length.
-                if(text1[i] == text2[j])
+                if (text1[i]==text2[j])
                     dp[i+1][j+1] = dp[i][j]+1;
-                // non-common letter --> get the maximum of neighbours.
+                    // non-common letter --> get the maximum of neighbours.
                 else
                     dp[i+1][j+1] = std::max(dp[i][j+1], dp[i+1][j]);
         return dp[text1.size()][text2.size()];
