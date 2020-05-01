@@ -32,4 +32,3 @@ int findUnsortedSubarray(std::vector<int>& nums) {
     }
     return finish - start + 1;
 }
-};

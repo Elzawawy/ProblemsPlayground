@@ -2,5 +2,7 @@ cmake_minimum_required(VERSION 3.12)
 project(ProblemsPlayground)
 
 set(CMAKE_CXX_STANDARD 17)
-
-add_executable(ProblemsPlayground src useful_IO.h src/30-days-challenge/3_maximum_subarray.cpp src/codejam-2020/vestigium.cpp src/codejam-2020/nesting_depth.cpp src/codejam-2020/parenting_partnering_returns.cpp src/30-days-challenge/4_move_zeroes.cpp src/30-days-challenge/5_best_time_buy_sell_stock2.cpp src/codejam-2020/expogo.cpp src/30-days-challenge/24_lru_cache.cpp src/30-days-challenge/6_group_anagrams.cpp src/30-days-challenge/7_counting_elements.cpp src/30-days-challenge/8_middle_linked_list.cpp src/30-days-challenge/9_backspace_string_compare.cpp src/30-days-challenge/10_min_stack.cpp src/30-days-challenge/11_diameter_binary_tree.cpp src/30-days-challenge/12_last_stone_weight.cpp src/30-days-challenge/13_contiguous_array.cpp src/30-days-challenge/14_perform_string_shifts.cpp src/30-days-challenge/15_product_array_except_self.cpp src/30-days-challenge/16_valid_parenthesis_string.cpp src/30-days-challenge/17_number_of_islands.cpp src/30-days-challenge/18_minimum_path_sum.cpp src/30-days-challenge/19_search_rotated_sorted_array.cpp src/30-days-challenge/20_construct_bst_from_preorder.cpp src/30-days-challenge/21_leftmost_column_with_atleast_one.cpp src/30-days-challenge/22_subarray_sum_equals_k.cpp src/30-days-challenge/23_bitwise_and_numbers_range.cpp src/30-days-challenge/25_jump_game.cpp src/30-days-challenge/26_longest_common_subsequence.cpp src/30-days-challenge/27_maximal_square.cpp src/30-days-challenge/28_first_unique_number.cpp src/30-days-challenge/29_binary_tree_maximum_path_sum.cpp src/30-days-challenge/30_check_valid_sequence_binary_tree.cpp)
+file(GLOB PROBLEMS_SOURCE src/*.cpp)
+file(GLOB CODEJAM_2020 src/codejam-2020/*.cpp)
+file(GLOB LEETCODE_THIRTY_DAYS src/30-days-challenge/*.cpp)
+add_executable(ProblemsPlayground main.cpp useful_IO.h ${PROBLEMS_SOURCE} ${LEETCODE_THIRTY_DAYS} ${CODEJAM_2020})
