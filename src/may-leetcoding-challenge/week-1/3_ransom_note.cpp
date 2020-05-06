@@ -11,6 +11,8 @@
  *
  * Problem source and more about it can be found from: https://leetcode.com/problems/ransom-note/
  */
+
+#include <unordered_map>
 class Solution {
 public:
     /** Solution 1: Using a HashMap to keep track of count of characters. [We can develop we similar approach with only a vector as well]
@@ -20,9 +22,9 @@ public:
      * @param magazine the string that has all the characters from magazines.
      * @return whether we can re-construct ransom note from magazine or not.
      */
-    bool canConstruct(string ransomNote, string magazine)
+    bool canConstruct(std::string ransomNote, std::string magazine)
     {
-        unordered_map<char, int> count_ransom(26);
+        std::unordered_map<char, int> count_ransom(26);
         // increase the count of characters in ransom note.
         for (auto c: ransomNote)
             count_ransom[c]++;

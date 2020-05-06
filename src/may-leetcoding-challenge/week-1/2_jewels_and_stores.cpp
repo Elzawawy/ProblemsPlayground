@@ -12,7 +12,8 @@
  *
  * Problem source and more about it can be found from: https://leetcode.com/problems/jewels-and-stones/
  */
-
+#include <string>
+#include <unordered_set>
 class Solution {
 public:
     /** Solution 1: Using Hash Table Lookups.
@@ -22,9 +23,9 @@ public:
      * @param S stones string
      * @return number of stones that are jewels.
      */
-    int numJewelsInStones(string J, string S)
+    int numJewelsInStones(std::string J, std::string S)
     {
-        unordered_set<char> set_jewels;
+        std::unordered_set<char> set_jewels;
         int num_jewels = 0;
         //insert jewels into an unordered_set which is basically a hash-table to make lookups of jewels O(1)
         for (auto& jewel_type: J)
