@@ -9,6 +9,7 @@
  *
  * Problem source and more about it can be found from: https://leetcode.com/problems/first-unique-character-in-a-string/
  */
+
 #include <unordered_map>
 class Solution {
 public:
@@ -18,12 +19,12 @@ public:
      * @param s string
      * @return index of first unique character in string.
      */
-    int firstUniqChar(string s)
+    int firstUniqChar(std::string s)
     {
         std::unordered_map<char, int> count_frequencies;
         // count for each character in the string.
-        for (int i = 0; i<s.size(); i++)
-            ++count_frequencies[s[i]];
+        for (char i : s)
+            ++count_frequencies[i];
         // iterate again on string and find the first character that has count equals to 1.
         for (int i = 0; i<s.size(); i++)
             if (count_frequencies[s[i]]==1)
